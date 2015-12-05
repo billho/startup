@@ -38,7 +38,10 @@
 		<!-- Logging -->
 		<logback.version>1.1.2</logback.version>
 		<slf4j.version>1.7.6</slf4j.version>
-
+		
+		<!-- lombok -->
+		<lombok.version>1.14.8</lombok.version>
+		
 		<!-- Test -->
 		<junit.version>4.11</junit.version>
 		
@@ -238,7 +241,14 @@
 			<version>5.1.31</version>
 		</dependency>
 		<!-- End DB MySql -->
-
+		
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+		</dependency>
+		
 		<!-- file upload -->
 		<dependency>
 			<groupId>commons-fileupload</groupId>
