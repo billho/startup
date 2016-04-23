@@ -3,6 +3,7 @@ package ext.billopen.start.web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import ext.billopen.start.db.entity.StartUpDemo;
@@ -27,5 +28,12 @@ public class HelloWordController {
 		ModelAndView modelAndView = new ModelAndView("showMessage");
 		modelAndView.addObject("message","Hi,World.");
 		return modelAndView;
+	}
+	@ResponseBody
+	@RequestMapping("/sayhijson")
+	public Object sayHijosn(){
+		StartUpDemo startUpDemo = new StartUpDemo();
+		startUpDemo.setContent("hello!");
+		return startUpDemo;
 	}
 }
